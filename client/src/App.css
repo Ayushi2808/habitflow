@@ -1,0 +1,800 @@
+
+/* Overall page layout */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        #e4f5e9 0%,
+        #fce7f3 50%,
+        #f8faff 100%
+    );
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #39785b, #24543f);
+    color: white;
+    padding: 28px 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0 0 40px;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-link {
+    color: #c7d2fe;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #4338ca;
+    color: white;
+}
+
+/* Main dashboard area */
+.main-content {
+    flex: 1;
+    padding: 36px;
+    min-width: 0;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #64748b;
+}
+
+/* Full browser width */
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app-layout {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    width: 0;
+}
+
+
+/* Dashboard overview */
+.overview-section {
+    margin-top: 30px;
+}
+
+.overview-section h2 {
+    color: #285943;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Statistics grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual cards */
+.stat-card {
+    padding: 24px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(60, 80, 65, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.stat-card p {
+    margin: 0 0 14px;
+    color: #52665a;
+    font-size: 14px;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 32px;
+    color: #285943;
+}
+
+.green-card {
+    background: linear-gradient(135deg, #d8f3dc, #ffffff);
+}
+
+.pink-card {
+    background: linear-gradient(135deg, #fce0ec, #ffffff);
+}
+
+.peach-card {
+    background: linear-gradient(135deg, #ffe8d6, #ffffff);
+}
+
+.purple-card {
+    background: linear-gradient(135deg, #e9e2ff, #ffffff);
+}
+
+
+/* Add Habit section */
+.add-habit-section {
+    margin-top: 35px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #f5dce8;
+    border-radius: 22px;
+    box-shadow: 0 8px 28px rgba(77, 112, 85, 0.07);
+}
+
+/* Section heading */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    color: #285943;
+    margin: 0 0 7px;
+    font-size: 22px;
+}
+
+.section-heading p {
+    color: #8b9290;
+    margin: 0;
+    font-size: 14px;
+}
+
+.habit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    color: #b83270;
+    background: linear-gradient(135deg, #fce0ec, #d8f3dc);
+    font-size: 24px;
+}
+
+/* Form layout */
+.habit-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    color: #385c49;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+    background: #fffafd;
+    color: #334155;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 48px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #79b995;
+    box-shadow: 0 0 0 3px rgba(121, 185, 149, 0.15);
+}
+
+/* Submit button */
+.add-habit-button {
+    align-self: end;
+    min-height: 46px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(120deg, #438b65, #d96b9b);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-habit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(195, 100, 145, 0.25);
+}
+
+.add-habit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Habits section */
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.empty-habits {
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    color: #718078;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+}
+
+/* Individual habit card */
+.habit-card {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e3eee6;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(60, 80, 65, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(60, 80, 65, 0.12);
+}
+
+/* Habit title and frequency */
+.habit-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.habit-card-heading h3 {
+    margin: 0;
+    color: #285943;
+    font-size: 19px;
+}
+
+.frequency-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e2f3e8;
+    color: #39785b;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Description */
+.habit-description {
+    min-height: 22px;
+    margin: 0 0 20px;
+    color: #7b8980;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Completion checkbox */
+.completion-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #42644f;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.completion-label input {
+    width: 17px;
+    height: 17px;
+    accent-color: #438b65;
+    cursor: pointer;
+}
+
+/* Action buttons */
+.habit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.habit-actions button {
+    padding: 9px 17px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.edit-button,
+.save-button {
+    background: #e0f1e5;
+    color: #347451;
+}
+
+.delete-button {
+    background: #fce4ec;
+    color: #bd456f;
+}
+
+.cancel-button {
+    background: #edf0ed;
+    color: #64736a;
+}
+
+.habit-actions button:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.97);
+}
+
+/* Edit form */
+.edit-habit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.edit-habit-form h3 {
+    margin: 0 0 5px;
+    color: #285943;
+}
+
+.edit-habit-form input,
+.edit-habit-form textarea,
+.edit-habit-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce8df;
+    border-radius: 10px;
+    background: #fffafd;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.edit-habit-form textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.edit-habit-form input:focus,
+.edit-habit-form textarea:focus,
+.edit-habit-form select:focus {
+    border-color: #79b995;
+    box-shadow: 0 0 0 3px rgba(121, 185, 149, 0.15);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .habits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Weekly Progress Section */
+.weekly-progress-section {
+    margin-top: 35px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid #e3eee6;
+    border-radius: 22px;
+    box-shadow: 0 8px 28px rgba(77, 112, 85, 0.07);
+}
+
+.weekly-progress-section .section-heading {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    min-width: 0;
+    height: 320px;
+    margin-top: 15px;
+}
+
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+        padding: 24px 15px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 18px 20px;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 17px;
+    }
+
+    .stat-card h3 {
+        font-size: 26px;
+    }
+
+    .add-habit-section,
+    .weekly-progress-section {
+        padding: 20px 16px;
+    }
+
+    .habit-form {
+        grid-template-columns: 1fr;
+    }
+
+    .habits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 280px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 16px 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .stat-card {
+        padding: 13px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 23px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .habit-card {
+        padding: 18px;
+    }
+
+    .habit-card-heading {
+        flex-wrap: wrap;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+}
+
+/* Habit Cards Section */
+.habit-card {
+    padding: 24px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e6f0e8;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(60, 100, 75, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(60, 100, 75, 0.12);
+}
+
+/* Habit Heading */
+.habit-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.habit-card-heading h3 {
+    margin: 0;
+    color: #285943;
+    font-size: 19px;
+}
+
+.frequency-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e2f3e7;
+    color: #39785b;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Description */
+.habit-description {
+    margin: 14px 0 18px;
+    color: #78857c;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Completion Checkbox */
+.completion-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    color: #456b54;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.completion-label input {
+    width: 17px;
+    height: 17px;
+    accent-color: #438b65;
+    cursor: pointer;
+}
+
+/* Habit Action Buttons */
+.habit-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.habit-actions button {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.edit-button,
+.save-button {
+    background: #e0f1e5;
+    color: #32734f;
+}
+
+.edit-button:hover,
+.save-button:hover {
+    background: #c9e8d2;
+}
+
+.delete-button,
+.cancel-button {
+    background: #fce4ed;
+    color: #b83270;
+}
+
+.delete-button:hover,
+.cancel-button:hover {
+    background: #f8cedd;
+}
+
+/* Edit Habit Form */
+.edit-habit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.edit-habit-form h3 {
+    margin: 0 0 5px;
+    color: #285943;
+    font-size: 19px;
+}
+
+.edit-habit-form input,
+.edit-habit-form textarea,
+.edit-habit-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fffafd;
+    color: #334155;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.edit-habit-form input:focus,
+.edit-habit-form textarea:focus,
+.edit-habit-form select:focus {
+    border-color: #79b995;
+    box-shadow: 0 0 0 3px rgba(121, 185, 149, 0.15);
+}
+
+.edit-habit-form textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+
+/* Responsive Design */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .habit-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .add-habit-section,
+    .habit-card {
+        padding: 18px;
+    }
+
+    .habit-card-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .habit-actions {
+        flex-wrap: wrap;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+.habits-grid {
+    scroll-margin-top: 25px;
+}
