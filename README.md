@@ -8,6 +8,8 @@ The application allows users to create and manage habits, record daily completio
 
 🚀 **Try HabitFlow:** [Open Live Application](https://habitflow-silk.vercel.app)
 
+> **Note:** The backend is hosted on Render's free tier, so the first request after a period of inactivity may take around 50 seconds or more to load. Subsequent requests should be faster.
+
 ## Features
 
 - **Habit Management:** Create, edit, and delete habits.
