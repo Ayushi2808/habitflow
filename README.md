@@ -4,6 +4,10 @@ HabitFlow is a full-stack MERN application designed to help users build consiste
 
 The application allows users to create and manage habits, record daily completions, and visualize their weekly progress.
 
+## Live Demo
+
+🚀 **Try HabitFlow:** [Open Live Application](https://habitflow-silk.vercel.app)
+
 ## Features
 
 - **Habit Management:** Create, edit, and delete habits.
